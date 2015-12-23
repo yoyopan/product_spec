@@ -110,5 +110,3 @@ client_product_spec = generate_client_product_spec()
 
 with open('product_spec.js', 'w', encoding='utf-8') as spec:
     spec.write(product_spec + '\n\n' + camera_spec + '\n\n' + client_product_spec)
-
-print (input('\nPress ENTER to continue'))
