@@ -1,6 +1,6 @@
 var CAMERA_PRODUCT_SPECS = [{
     "name": "CHAMP Outdoor IR Compact Bullet BL3102",
-    "image": "/static/calculator/imgs/BL3102.png",
+    "image": "assets/imgs/BL3102.png",
     "type": "Bullet",
     "lens_type": "Fixed",
     "outdoor": true,
@@ -19,7 +19,7 @@ var CAMERA_PRODUCT_SPECS = [{
         "4. ROI, Corridor Mode, Digital WDR"
 }, {
     "name": "CHAMP Motorized Lens Outdoor IR Bullet BL5302",
-    "image": "/static/calculator/imgs/BL5302.jpg",
+    "image": "assets/imgs/BL5302.jpg",
     "type": "Bullet",
     "lens_type": "Motorized",
     "outdoor": true,
@@ -40,7 +40,7 @@ var CAMERA_PRODUCT_SPECS = [{
         "6. 50m Adaptive IR\n"
 }, {
     "name": "CHAMP Motorized Lens Outdoor IR Bullet BL7302",
-    "image": "/static/calculator/imgs/BL7302.jpg",
+    "image": "assets/imgs/BL7302.jpg",
     "type": "Bullet",
     "lens_type": "Motorized",
     "outdoor": true,
@@ -61,7 +61,7 @@ var CAMERA_PRODUCT_SPECS = [{
         "6. 50m Adaptive IR\n"
 }, {
     "name": "CHAMP Outdoor IR Eyeball Dome DM3102",
-    "image": "/static/calculator/imgs/DM3102.jpg",
+    "image": "assets/imgs/DM3102.jpg",
     "type": "Dome",
     "lens_type": "Fixed",
     "outdoor": true,
@@ -80,7 +80,7 @@ var CAMERA_PRODUCT_SPECS = [{
         "4. ROI, Corridor Mode, Digital WDR"
 }, {
     "name": "CHAMP Motorized Lens Outdoor IR Dome DM5302",
-    "image": "/static/calculator/imgs/DM5302.jpg",
+    "image": "assets/imgs/DM5302.jpg",
     "type": "Dome",
     "lens_type": "Motorized",
     "outdoor": true,
@@ -101,7 +101,7 @@ var CAMERA_PRODUCT_SPECS = [{
         "6. 50m Adaptive IR\n"
 }, {
     "name": "CHAMP Motorized Lens Outdoor IR Dome  DM7302",
-    "image": "/static/calculator/imgs/DM7302.jpg",
+    "image": "assets/imgs/DM7302.jpg",
     "type": "Dome",
     "lens_type": "Motorized",
     "outdoor": true,
