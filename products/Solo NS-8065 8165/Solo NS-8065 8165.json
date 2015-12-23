@@ -1,0 +1,27 @@
+{
+    "image": "/static/calculator/imgs/NVRsolo_8bay.png",
+    "name": "NVRsolo NS-8065/8165",
+    "series": "Solo",
+    "url": "http://www.nuuo.com/ProductNode.php?node=13#4",
+
+    "os": "Linux",
+    "pc_based": false,
+    "max_channel": 16,
+    "max_disk_size": 32000,
+    "max_disk_throughput": 81920,
+    "max_memory_size": 1048576,
+    "min_recycling_ratio": 0.01,
+    "max_recycling_ratio": 0.20,
+
+    "features": {
+        "local_display": true,
+        "local_config": true,
+        "hardware_type": "Rackmount",
+        "raid": true,
+        "power_supply": false,
+        "signal_input": false
+    },
+
+    "cpu_loading_factors": null,
+    "remark": ["Minimum recycle percentage: 1%"]
+}

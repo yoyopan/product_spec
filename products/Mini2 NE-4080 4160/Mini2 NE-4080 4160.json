@@ -1,0 +1,27 @@
+{
+    "image": "/static/calculator/imgs/NVRmini2_4bay.png",
+    "name": "NVRMini2 NE-4080/4160",
+    "series": "Mini2",
+    "url": "http://www.nuuo.com/ProductNode.php?node=2#4",
+
+    "os": "Linux",
+    "pc_based": false,
+    "max_channel": 16,
+    "max_disk_size": 16000,
+    "max_disk_throughput": 81920,
+    "max_memory_size": 524288,
+    "min_recycling_ratio": 0.01,
+    "max_recycling_ratio": 0.20,
+
+    "features": {
+        "local_display": false,
+        "local_config": false,
+        "hardware_type": "Tower",
+        "raid": true,
+        "power_supply": false,
+        "signal_input": false
+    },
+
+    "cpu_loading_factors": null,
+    "remark": ["Minimum recycle percentage: 1%"]
+}

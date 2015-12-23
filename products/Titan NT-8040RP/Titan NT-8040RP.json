@@ -1,0 +1,27 @@
+{
+    "image": "/static/calculator/imgs/NT-8040RP.jpg",
+    "name": "Titan NT-8040RP",
+    "series": "Titan",
+    "url": "http://www.nuuo.com/ProductNode.php?node=1#4",
+
+    "os": "Linux",
+    "pc_based": false,
+    "max_channel": 64,
+    "max_disk_size": 48000,
+    "max_disk_throughput": 256000,
+    "max_memory_size": 8388608,
+    "min_recycling_ratio": 0.10,
+    "max_recycling_ratio": 0.10,
+
+    "features": {
+        "local_display": true,
+        "local_config": false,
+        "hardware_type": "Rackmount",
+        "raid": true,
+        "power_supply": true,
+        "signal_input": false
+    },
+
+    "cpu_loading_factors": null,
+    "remark": ["Minimum recycle percentage: 10%"]
+}

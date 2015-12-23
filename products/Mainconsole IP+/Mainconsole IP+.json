@@ -1,0 +1,21 @@
+{
+    "image": "/static/calculator/imgs/Mainconsole.jpg",
+    "name": "Mainconsole Windows Based Software IP+",
+    "series": "Mainconsole",
+    "url": "http://www.nuuo.com/ProductNode.php?node=5#",
+
+    "os": "Microsoft Windows",
+    "pc_based": true,
+    "min_recycling_ratio": 0.05,
+    "max_recycling_ratio": 0.20,
+
+    "features": {
+        "local_display": true,
+        "local_config": true,
+        "hardware_type": "",
+        "raid": false,
+        "power_supply": false,
+        "signal_input": false
+    },
+    "remark": ["Minimum recycle percentage: 5%"]
+}

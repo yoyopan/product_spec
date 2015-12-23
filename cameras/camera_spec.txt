@@ -1,0 +1,123 @@
+var CAMERA_PRODUCT_SPECS = [{
+    "name": "CHAMP Outdoor IR Compact Bullet BL3102",
+    "image": "/static/calculator/imgs/BL3102.png",
+    "type": "Bullet",
+    "lens_type": "Fixed",
+    "outdoor": true,
+    "resolution": [
+        "QVGA 320X240", "nHD 640X360", "VGA 640X480", "1MP HD 1280X720",
+        "2MP Full HD 1920X1080"
+    ],
+    "supported_format": [
+        'H.264', 'MJPEG'
+    ],
+    "max_frame_rate": 25,
+    "max_bit_rate": 10240,
+    "description": "1. Max Resolution: Full HD 1920X1080\n" +
+        "2. Video Format: H.264/MJPEG\n" +
+        "3. Max Frame Rate: 25fps@1920x1080\n" +
+        "4. ROI, Corridor Mode, Digital WDR"
+}, {
+    "name": "CHAMP Motorized Lens Outdoor IR Bullet BL5302",
+    "image": "/static/calculator/imgs/BL5302.jpg",
+    "type": "Bullet",
+    "lens_type": "Motorized",
+    "outdoor": true,
+    "resolution": [
+        "QVGA 320X240", "nHD 640X360", "VGA 640X480", "1MP HD 1280X720",
+        "2MP Full HD 1920X1080"
+    ],
+    "supported_format": [
+        'H.264', 'MJPEG'
+    ],
+    "max_frame_rate": 30,
+    "max_bit_rate": 10240,
+    "description": "1. Max Resolution: Full HD 1920X1080\n" +
+        "2. Video Format: H.264/MJPEG\n" +
+        "3. Max Frame Rate: 30fps@1920x1080\n" +
+        "4. Digital WDR\n" +
+        "5. Motorized Zoom/Focus\n" +
+        "6. 50m Adaptive IR\n"
+}, {
+    "name": "CHAMP Motorized Lens Outdoor IR Bullet BL7302",
+    "image": "/static/calculator/imgs/BL7302.jpg",
+    "type": "Bullet",
+    "lens_type": "Motorized",
+    "outdoor": true,
+    "resolution": [
+        "QVGA 320X240", "nHD 640X360", "VGA 640X480", "1MP HD 1280X720",
+        "2MP Full HD 1920X1080"
+    ],
+    "supported_format": [
+        'H.265', 'H.264', 'MJPEG'
+    ],
+    "max_frame_rate": 60,
+    "max_bit_rate": 10240,
+    "description": "1. Max Resolution: Full HD 1920X1080\n" +
+        "2. Video Format: H.265/H.264/MJPEG\n" +
+        "3. Max Frame Rate: 60fps@1920x1080\n" +
+        "4. WDR Extreme\n" +
+        "5. Motorized Zoom/Focus\n" +
+        "6. 50m Adaptive IR\n"
+}, {
+    "name": "CHAMP Outdoor IR Eyeball Dome DM3102",
+    "image": "/static/calculator/imgs/DM3102.jpg",
+    "type": "Dome",
+    "lens_type": "Fixed",
+    "outdoor": true,
+    "resolution": [
+        "QVGA 320X240", "nHD 640X360", "VGA 640X480", "1MP HD 1280X720",
+        "2MP Full HD 1920X1080"
+    ],
+    "supported_format": [
+        'H.264', 'MJPEG'
+    ],
+    "max_frame_rate": 25,
+    "max_bit_rate": 10240,
+    "description": "1. Max Resolution: Full HD 1920X1080\n" +
+        "2. Video Format: H.264/MJPEG\n" +
+        "3. Max Frame Rate: 25fps@1920x1080\n" +
+        "4. ROI, Corridor Mode, Digital WDR"
+}, {
+    "name": "CHAMP Motorized Lens Outdoor IR Dome DM5302",
+    "image": "/static/calculator/imgs/DM5302.jpg",
+    "type": "Dome",
+    "lens_type": "Motorized",
+    "outdoor": true,
+    "resolution": [
+        "QVGA 320X240", "nHD 640X360", "VGA 640X480", "1MP HD 1280X720",
+        "2MP Full HD 1920X1080"
+    ],
+    "supported_format": [
+        'H.264', 'MJPEG'
+    ],
+    "max_frame_rate": 30,
+    "max_bit_rate": 10240,
+    "description": "1. Max Resolution: Full HD 1920X1080\n" +
+        "2. Video Format: H.264/MJPEG\n" +
+        "3. Max Frame Rate: 30fps@1920x1080\n" +
+        "4. Digital WDR\n" +
+        "5. Motorized Zoom/Focus\n" +
+        "6. 50m Adaptive IR\n"
+}, {
+    "name": "CHAMP Motorized Lens Outdoor IR Dome  DM7302",
+    "image": "/static/calculator/imgs/DM7302.jpg",
+    "type": "Dome",
+    "lens_type": "Motorized",
+    "outdoor": true,
+    "resolution": [
+        "QVGA 320X240", "nHD 640X360", "VGA 640X480", "1MP HD 1280X720",
+        "2MP Full HD 1920X1080"
+    ],
+    "supported_format": [
+        'H.265', 'H.264', 'MJPEG'
+    ],
+    "max_frame_rate": 60,
+    "max_bit_rate": 10240,
+    "description": "1. Max Resolution: Full HD 1920X1080\n" +
+        "2. Video Format: H.265/H.264/MJPEG\n" +
+        "3. Max Frame Rate: 60fps@1920x1080\n" +
+        "4. WDR Extreme\n" +
+        "5. Motorized Zoom/Focus\n" +
+        "6. 50m Adaptive IR\n"
+}];

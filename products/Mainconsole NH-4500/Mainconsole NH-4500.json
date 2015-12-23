@@ -1,0 +1,28 @@
+{
+    "image": "/static/calculator/imgs/NH-4500.jpg",
+    "name": "Mainconsole Hybrid Appliance NH-4500-ENT",
+    "series": "Mainconsole",
+    "url": "http://www.nuuo.com/ProductNode.php?node=4#4",
+
+    "os": "Microsoft Windows",
+    "pc_based": false,
+    "max_channel": 64,
+    "max_disk_size": 24000,
+    "max_disk_throughput": 2235520,
+    "max_memory_size": 4194304,
+    "min_recycling_ratio": 0.05,
+    "max_recycling_ratio": 0.20,
+
+    "features": {
+        "local_display": true,
+        "local_config": true,
+        "hardware_type": "Rackmount",
+        "raid": false,
+        "power_supply": true,
+        "signal_input": true
+    },
+
+    "cpu_loading_factors": null,
+
+    "remark": ["Minimum recycle percentage: 5%"]
+}
