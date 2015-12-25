@@ -13,27 +13,27 @@ var CLIENT_PRODUCT_SPECS = [{
     },
 
     "cpu_loading_factors": {
-        "Intel Atom D525 1.80 GHz": {
+        "Intel Atom D525 @ 1.80GHz": {
             "local_display_rf": 4.601629928510E-09, // Local Display(Resolution * FPS)
             "local_display_b": 4.157490848248E-08 // Local Display(Bit rate)
         },
-        "Intel Core2 Duo E4700 2.6GHz": {
+        "Intel Core2 Duo E4700 @ 2.60GHz": {
             "local_display_rf": 4.313105178370E-09, // Local Display(Resolution * FPS)
             "local_display_b": 2.133376634974E-07 // Local Display(Bit rate)
         },
-        "Intel Core i5-2400 3.1GHz": {
+        "Intel Core i5-2400 @ 3.10GHz": {
             "local_display_rf": 2.726401894648E-09, // Local Display(Resolution * FPS)
             "local_display_b": 1.157923967692E-06 // Local Display(Bit rate)
         },
-        "Intel Core i7-4770S 3.1GHz": {
+        "Intel Core i7-4770S @ 3.10GHz": {
             "local_display_rf": 1.44467914529449E-09, // Local Display(Resolution * FPS)
             "local_display_b": 1.92095116202272E-06 // Local Display(Bit rate)
         },
-        "Intel Core i7-6700 3.40GHz": {
+        "Intel Core i7-6700 @ 3.40GHz": {
             "local_display_rf": 1.212835429719E-09, // Local Display(Resolution * FPS)
             "local_display_b": 2.058970917003E-06 // Local Display(Bit rate)
         },
-        "Intel Core i7-4790 3.60GHz": {
+        "Intel Core i7-4790 @ 3.60GHz": {
             "local_display_rf": 1.189797331799E-09, // Local Display(Resolution * FPS)
             "local_display_b": 2.072685813792E-06 // Local Display(Bit rate)
         }
