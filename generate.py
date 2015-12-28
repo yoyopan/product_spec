@@ -43,15 +43,27 @@ def calculate_coef(product, statistics_files):
         "local_display_b": results[config['coef']["local_display_b"] - 1]['Local Decode(Total Bit Rate)'],
         "smart_guard_rf": results[config['coef']["smart_guard_rf"] - 1]['Smart Guard(General Motion)(Total DecodeResolution*FPS)'],
         "smart_guard_b": results[config['coef']["smart_guard_b"] - 1]['Smart Guard(General Motion)(Total Decode Bit Rate)'],
-        "smart_guard_p": results[config['coef']["smart_guard_p"] - 1]['Smart Guard(General Motion)(Total DecodeResolution*FPS)(Pure)'],
         "ivs_rf": results[config['coef']["ivs_rf"] - 1]['IVS Channel(Resolution*FPS)'],
         "ivs_b": results[config['coef']["ivs_b"] - 1]['IVS Channel(Bit Rate)'],
-        "ivs_p": results[config['coef']["ivs_p"] - 1]['IVS Channel(Resolution*FPS)(Pure)'],
         "live_view": results[config['coef']["live_view"] - 1]['Live View Connection(Server Total UpLoad Bit Rate)'],
         "record": results[config['coef']["record"] - 1]['Always Record(Total Record Bit Rate)'],
         "metadata": results[config['coef']["metadata"] - 1]['Metadata'],
         "edge_event": results[config['coef']["edge_event"] - 1]['Edge Event']
     }
+
+    #some products don't have pure smart_guard/ivs
+    smart_guard_p = 'Smart Guard(General Motion)(Total DecodeResolution*FPS)(Pure)'
+    ivs_p = 'IVS Channel(Resolution*FPS)(Pure)'
+    if smart_guard_p in results[config['coef']["smart_guard_p"] - 1]:
+        coef["smart_guard_p"] = results[config['coef']["smart_guard_p"] - 1][smart_guard_p]
+    else:
+        coef["smart_guard_p"] = 0
+
+    if ivs_p in results[config['coef']["ivs_p"] - 1]:
+        coef["ivs_p"] = results[config['coef']["ivs_p"] - 1][ivs_p]
+    else:
+        coef["ivs_p"] = 0
+
     return {config['video_format']: coef}
 
 
