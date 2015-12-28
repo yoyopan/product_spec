@@ -120,5 +120,5 @@ product_spec = generate_product_spec()
 camera_spec = generate_camera_spec()
 client_product_spec = generate_client_product_spec()
 
-with open('product_spec.js', 'w', encoding='utf-8') as spec:
+with open('product_specs.js', 'w', encoding='utf-8') as spec:
     spec.write(product_spec + '\n\n' + camera_spec + '\n\n' + client_product_spec)
