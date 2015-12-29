@@ -81,7 +81,7 @@ def generate_product_spec():
                 continue
 
             products[name]['config'] = os.path.join(dir_path, 'config.json')
-            for file_path in glob.glob(dir_path + '/*.csv'):
+            for file_path in sorted(glob.glob(dir_path + '/*.csv')):
                 products[name]['data'].append(file_path)
 
     for name in products:
