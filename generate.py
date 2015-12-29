@@ -51,18 +51,19 @@ def calculate_coef(product, statistics_files):
         "edge_event": results[config['coef']["edge_event"] - 1]['Edge Event']
     }
 
-    #some products don't have pure smart_guard/ivs
+    #if this product doesn't have ivs_p / smart_p
+    #we set it as ivs_rf / smart_guard_rf (max loading)
     smart_guard_p = 'Smart Guard(General Motion)(Total DecodeResolution*FPS)(Pure)'
     ivs_p = 'IVS Channel(Resolution*FPS)(Pure)'
     if smart_guard_p in results[config['coef']["smart_guard_p"] - 1]:
         coef["smart_guard_p"] = results[config['coef']["smart_guard_p"] - 1][smart_guard_p]
     else:
-        coef["smart_guard_p"] = 0
+        coef["smart_guard_p"] = coef['smart_guard_rf']
 
     if ivs_p in results[config['coef']["ivs_p"] - 1]:
         coef["ivs_p"] = results[config['coef']["ivs_p"] - 1][ivs_p]
     else:
-        coef["ivs_p"] = 0
+        coef["ivs_p"] = coef['ivs_rf']
 
     return {config['video_format']: coef}
 
