@@ -17,7 +17,8 @@
         "local_display": true,
         "local_config": true,
         "hardware_type": "Rackmount",
-        "raid": false,
+        "raid_0_1": true,
+        "raid_5_10": false,
         "power_supply": false,
         "signal_input": false
     },
