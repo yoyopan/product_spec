@@ -3,6 +3,7 @@
     "name": "NVRsolo NS-8060/8160",
     "series": "Solo",
     "url": "http://www.nuuo.com/ProductNode.php?node=13#4",
+    "supported_cameras_url":"http://www.nuuo.com/SupportCamera.php?node_id=4#5",
 
     "os": "Linux",
     "pc_based": false,

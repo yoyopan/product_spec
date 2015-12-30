@@ -3,6 +3,7 @@
     "name": "Mainconsole IP Appliance CT-8000IP",
     "series": "Mainconsole",
     "url": "http://www.nuuo.com/ProductNode.php?node=17#4",
+    "supported_cameras_url":"http://www.nuuo.com/SupportCamera.php?node_id=4#4",
 
     "os": "Microsoft Windows",
     "pc_based": false,
