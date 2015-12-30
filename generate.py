@@ -3,11 +3,12 @@ import statsmodels.api as sm
 import sys
 import json
 import os
-import re
 import glob
 
+from pathlib import Path
 
-def calculate_coef(product, statistics_files):
+
+def _calculate_coef(config_file, statistics_files):
     data_list = []
     for statistics_file in statistics_files:
         data_list.append(pd.read_csv(statistics_file))
@@ -30,7 +31,7 @@ def calculate_coef(product, statistics_files):
             print (input('\nPress ENTER to continue'))
             sys.exit(0)
 
-    with open(product['config'], 'r') as config_file:
+    with open(config_file, 'r') as config_file:
         try:
             config = json.load(config_file)
         except ValueError:
@@ -51,8 +52,8 @@ def calculate_coef(product, statistics_files):
         "edge_event": results[config['coef']["edge_event"] - 1]['Edge Event']
     }
 
-    #if this product doesn't have ivs_p / smart_p
-    #we set it as ivs_rf / smart_guard_rf (max loading)
+    # if this product doesn't have ivs_p / smart_p
+    # we set it as ivs_rf / smart_guard_rf (max loading)
     smart_guard_p = 'Smart Guard(General Motion)(Total DecodeResolution*FPS)(Pure)'
     ivs_p = 'IVS Channel(Resolution*FPS)(Pure)'
     if smart_guard_p in results[config['coef']["smart_guard_p"] - 1]:
@@ -65,42 +66,51 @@ def calculate_coef(product, statistics_files):
     else:
         coef["ivs_p"] = coef['ivs_rf']
 
-    return {config['video_format']: coef}
+    return coef
 
 
 def generate_product_spec():
-    product_names = os.listdir('products/')
-    products = {}
-    product_list = []
+    products = []
+    for product_path in Path("products").iterdir():
+        product = _parse_product(product_path)
+        products.append(json.dumps(product, indent=4, ensure_ascii=False))
 
-    for name in product_names:
-        products[name] = {'config': "", 'data': []}
-
-        for dir_path in glob.glob('products/' + name + '/*'):
-            if not os.path.isdir(dir_path):
-                continue
-
-            products[name]['config'] = os.path.join(dir_path, 'config.json')
-            for file_path in sorted(glob.glob(dir_path + '/*.csv')):
-                products[name]['data'].append(file_path)
-
-    for name in products:
-        print ('Processing:', name)
-        product = products[name]
-
-        with open(os.path.join('products', name, name + '.json'), 'r', encoding='utf-8') as outfile:
-            template = json.load(outfile)
-
-        if len(product['data']) == 0:
-            print ('No data')
-        else:
-            template["cpu_loading_factors"] = calculate_coef(product, product['data'])
-
-        product_list.append(str(json.dumps(template, indent=4, ensure_ascii=False)))
-
-    product_spec = "var PRODUCT_SPECS = [" + ", ".join(product_list) + '];'
-    print ('Done!')
+    product_spec = "var PRODUCT_SPECS = [{}];".format(", ".join(products))
+    print('Done!')
     return product_spec
+
+
+def _parse_product(product_path):
+    print("Processing: {} ...".format(product_path.name))
+
+    config_file = product_path / (product_path.name + ".json")
+    with config_file.open(encoding='utf-8') as outfile:
+        product = json.load(outfile)
+        product['cpu_loading_factors'] = _parse_cpu_loading_factors(product_path)
+
+    return product
+
+
+def _parse_cpu_loading_factors(product_path):
+    cpu_loading_factors = {
+        'IP Camera': _calculate_cpu_factors(product_path / "IP Camera"),
+        'Analog Camera': _calculate_cpu_factors(product_path / "Analog Camera"),
+    }
+    return cpu_loading_factors
+
+
+def _calculate_cpu_factors(base_dir):
+    cpu_factors = {}
+    if base_dir.exists():
+        for data_dir in base_dir.iterdir():
+            video_format = data_dir.name
+            print("Processing {} ...".format(video_format))
+
+            cpu_factors[video_format] = _calculate_coef(
+               config_file=str(data_dir / "config.json"),
+               statistics_files=sorted(map(str, data_dir.glob("*.csv"))),
+            )
+    return cpu_factors
 
 
 def generate_camera_spec():
@@ -115,8 +125,7 @@ def generate_client_product_spec():
     return client_product_spec
 
 
-print ('Generating')
-
+print('Generating')
 product_spec = generate_product_spec()
 camera_spec = generate_camera_spec()
 client_product_spec = generate_client_product_spec()
