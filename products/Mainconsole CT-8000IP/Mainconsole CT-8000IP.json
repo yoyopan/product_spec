@@ -7,7 +7,7 @@
 
     "os": "Microsoft Windows",
     "pc_based": false,
-    "max_channel": 64,
+    "max_channel": 96,
     "max_disk_size": 28000,
     "max_disk_throughput": 256000,
     "max_memory_size": 8388608,

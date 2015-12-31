@@ -7,6 +7,7 @@
 
     "os": "Microsoft Windows",
     "pc_based": true,
+    "max_channel": 96,
     "min_recycling_ratio": 0.05,
     "max_recycling_ratio": 0.20,
 
