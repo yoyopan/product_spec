@@ -2,7 +2,6 @@ import pandas as pd
 import statsmodels.api as sm
 import sys
 import json
-import os
 import glob
 
 from pathlib import Path
@@ -92,10 +91,20 @@ def _parse_product(product_path):
 
 
 def _parse_cpu_loading_factors(product_path):
-    cpu_loading_factors = {
-        'IP Camera': _calculate_cpu_factors(product_path / "IP Camera"),
-        'Analog Camera': _calculate_cpu_factors(product_path / "Analog Camera"),
-    }
+    cpu_loading_factors = {}
+    if product_path.name == "Mainconsole IP+":
+        for cpu_model_path in product_path.iterdir():
+            if not cpu_model_path.is_dir():
+                continue
+            cpu_loading_factors[cpu_model_path.name] = {
+                'IP Camera': _calculate_cpu_factors(cpu_model_path / "IP Camera"),
+                'Analog Camera': _calculate_cpu_factors(cpu_model_path / "Analog Camera"),
+            }
+    else:
+        cpu_loading_factors = {
+            'IP Camera': _calculate_cpu_factors(product_path / "IP Camera"),
+            'Analog Camera': _calculate_cpu_factors(product_path / "Analog Camera"),
+        }
     return cpu_loading_factors
 
 
