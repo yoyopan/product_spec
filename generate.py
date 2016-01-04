@@ -70,7 +70,14 @@ def _calculate_coef(config_file, statistics_files):
 
 def generate_product_spec():
     products = []
-    for product_path in Path("products").iterdir():
+    base_dir = "products/"
+
+    if len(sys.argv) > 1:
+        base_dir += sys.argv[1]
+    else:
+        base_dir += "nuuo"
+
+    for product_path in Path(base_dir).iterdir():
         product = _parse_product(product_path)
         products.append(json.dumps(product, indent=4, ensure_ascii=False))
 
