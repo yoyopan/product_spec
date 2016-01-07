@@ -136,9 +136,52 @@ def generate_camera_spec():
 
 
 def generate_client_product_spec():
-    with open('client_pc/client_pc_spec.txt', 'r', encoding='utf-8') as spec:
-        client_product_spec = spec.read()
+    client_products = []
+    base_dir = "client_pc/"
+
+    if len(sys.argv) > 1:
+        base_dir += sys.argv[1]
+    else:
+        base_dir += "nuuo"
+
+    for product_path in Path(base_dir).iterdir():
+        client_product = _parse_client_product(product_path)
+        client_products.append(json.dumps(client_product, indent=4, ensure_ascii=False))
+
+    client_product_spec = "var CLIENT_PRODUCT_SPECS = [{}];".format(", ".join(client_products))
+    print('Done!')
     return client_product_spec
+
+
+def _parse_client_product(client_product_path):
+    print("Processing: {} ...".format(client_product_path.name))
+
+    config_file = client_product_path / (client_product_path.name + ".json")
+    print(config_file)
+    with config_file.open(encoding='utf-8') as outfile:
+        client_product = json.load(outfile)
+        client_product['cpu_loading_factors'] = _parse_client_cpu_loading_factors(client_product_path)
+
+    return client_product
+
+
+def _parse_client_cpu_loading_factors(product_path):
+    cpu_loading_factors = {}
+    for cpu_model_dir in product_path.iterdir():
+        if not cpu_model_dir.is_dir():
+            continue
+        cpu_loading_factors[cpu_model_dir.name] = {}
+        for video_format_dir in cpu_model_dir.iterdir():
+            coef = _calculate_coef(
+               config_file=str(video_format_dir / "config.json"),
+               statistics_files=sorted(map(str, video_format_dir.glob("*.csv"))),
+            )
+
+            cpu_loading_factors[cpu_model_dir.name][video_format_dir.name] = {
+                'local_display_rf': coef['local_display_rf'],
+                'local_display_b': coef['local_display_b'],
+            }
+    return cpu_loading_factors
 
 
 print('Generating')

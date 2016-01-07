@@ -1,0 +1,16 @@
+{
+    "image": "assets/imgs/NuClient.jpg",
+    "name": "Remote Live Viewer",
+    "series": "Mainconsole",
+    "url": "http://www.nuuo.com",
+
+    "support_products": {
+        "Mainconsole": true,
+        "Solo": true,
+        "Mini2": true,
+        "Crystal": false,
+        "Titan": false
+    },
+
+    "cpu_loading_factors": null
+}

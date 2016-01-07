@@ -1,0 +1,16 @@
+{
+    "image": "assets/imgs/NuClient.jpg",
+    "name": "Titan NuClient",
+    "series": "Titan",
+    "url": "http://www.nuuo.com",
+
+    "support_products": {
+        "Mainconsole": false,
+        "Solo": false,
+        "Mini2": false,
+        "Crystal": true,
+        "Titan": true
+    },
+
+    "cpu_loading_factors": null
+}

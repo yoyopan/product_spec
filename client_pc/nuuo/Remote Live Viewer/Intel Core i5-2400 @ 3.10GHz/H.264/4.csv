@@ -1,0 +1,11 @@
+Local Decode(TotalCH*Resolution*FPS),Smart Guard(General Motion)(Total DecodeResolution*FPS)(Pure),Smart Guard(General Motion)(Total Decode Bit Rate),Live View Connection(Server Total UpLoad Bit Rate),Always Record(Total Record Bit Rate),const,Loading Avg
+124416000,0,0,0,16384,0,0.3041
+155520000,0,0,0,20480,0,0.3899
+186624000,0,0,0,24576,0,0.4713
+217728000,0,0,0,28672,0,0.589
+248832000,0,0,0,32768,0,0.695
+124416000,124416000,16384,0,16384,0,0.3243
+248832000,248832000,32768,0,32768,0,0.8084
+0,155520000,20480,0,20480,0,0.415
+0,186624000,24576,0,24576,0,0.5328
+0,217728000,28672,0,28672,0,0.6341
