@@ -1,8 +1,8 @@
 {
-    "image": "assets/imgs/NuClient.jpg",
+    "image": "assets/imgs/remote_live_viewer.jpg",
     "name": "Remote Live Viewer",
     "series": "Mainconsole",
-    "url": "http://www.nuuo.com",
+    "url": "http://www.nuuo.com/ProductNode.php?node=5#",
 
     "support_products": {
         "Mainconsole": true,

@@ -1,8 +1,8 @@
 {
-    "image": "assets/imgs/NuClient.jpg",
+    "image": "assets/imgs/cms.jpg",
     "name": "NCS Matrix",
     "series": "Mainconsole",
-    "url": "http://www.nuuo.com",
+    "url": "http://www.nuuo.com/ProductNode.php?node=3#",
 
     "support_products": {
         "Mainconsole": true,
