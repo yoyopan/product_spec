@@ -1,0 +1,7 @@
+Local Decode(TotalCH*Resolution*FPS),Local Decode(Total Bit Rate),Smart Guard(General Motion)(Total DecodeResolution*FPS),Smart Guard(General Motion)(Total Decode Bit Rate),Live View Connection(Server Total UpLoad Bit Rate),Always Record(Total Record Bit Rate),Metadata,Edge Event,IVS Channel(Resolution*FPS)(Pure),IVS Channel(Bit Rate),const,Loading Avg
+124416000,16384,0,0,0,16384,0,0,0,0,0,0.427
+155520000,20480,0,0,0,20480,0,0,0,0,0,0.556
+186624000,24576,0,0,0,24576,0,0,0,0,0,0.7003
+217728000,28672,0,0,0,28672,0,0,0,0,0,0.861
+124416000,16384,0,0,0,16384,0,0,124416000,16384,0,0.6154
+155520000,20480,0,0,0,20480,0,0,155520000,20480,0,0.7641
