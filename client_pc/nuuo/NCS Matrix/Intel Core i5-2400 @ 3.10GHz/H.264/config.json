@@ -1,8 +1,8 @@
 {
     "video_format": "H.264",
     "coef": {
-        "local_display_rf": 1,
-        "local_display_b": 1,
+        "local_display_rf": 6,
+        "local_display_b": 6,
         "smart_guard_rf": 1,
         "smart_guard_b": 1,
         "smart_guard_p": 4,
