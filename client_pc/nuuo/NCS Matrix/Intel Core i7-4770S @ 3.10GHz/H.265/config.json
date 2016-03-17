@@ -1,14 +1,14 @@
 {
     "video_format": "H.265",
     "coef": {
-        "local_display_rf": 2,
+        "local_display_rf": 1,
         "local_display_b": 1,
         "smart_guard_rf": 1,
         "smart_guard_b": 1,
-        "smart_guard_p": 2,
+        "smart_guard_p": 1,
         "ivs_rf": 1,
         "ivs_b": 1,
-        "ivs_p": 2,
+        "ivs_p": 1,
         "live_view": 1,
         "record": 1,
         "metadata": 1,
