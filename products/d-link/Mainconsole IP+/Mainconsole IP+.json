@@ -1,9 +1,9 @@
 {
     "image": "assets/imgs/Mainconsole.jpg",
-    "name": "Mainconsole Windows Based Software IP+",
+    "name": "D-ViewCam",
     "series": "Mainconsole",
-    "url": "http://www.nuuo.com/ProductNode.php?node=5#",
-    "supported_cameras_url":"http://www.nuuo.com/SupportCamera.php?node_id=4#4",
+    "url": "http://www.dlink.com",
+    "supported_cameras_url":"http://www.dlink.com",
 
     "os": "Microsoft Windows",
     "pc_based": true,
