@@ -11,6 +11,9 @@ git tool: [TortoiseGit](https://tortoisegit.org/)
 
 [Step by step](https://docs.google.com/presentation/d/13R_uY1wWkM9xs4NZTqyKzN9lQGDJ54UFV-vRLM-i3F0/edit#slide=id.g10864fa8cc_1_1)
 
+[Install Anaconda](https://docs.anaconda.com/anaconda/install/)
+
+Execute Anaconda Prompt
 
 ##Products##
 
